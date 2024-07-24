@@ -6,9 +6,9 @@
 }
 
 :root {
-  --brand-primary: #387E96;
-  --title-primary: #202024;
-  --text-secondary: #121214;
+  --brand-primary: hsl(195, 46%, 40%);
+  --title-primary: hsl(240, 6%, 13%);
+  --text-secondary: hsl(240, 5%, 7%);
   
   --text-sm: 1.4rem;
   --text-base: 1.6rem;
@@ -142,4 +142,66 @@ footer {
   margin-top: 4.0rem;
 
   font-size: var(--text-base);
+}
+
+@media (width > 70rem) {
+  img {
+    border-radius: 5px;
+  }
+
+  #app {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+
+    gap: 4rem 3.2rem;
+  }
+
+  header .container,
+  .container {
+    max-width: initial;
+    padding: initial;
+    margin: initial;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  header .container {
+    max-width: 114rem;
+    margin-inline: auto;
+  }
+
+  header form {
+    flex: 1;
+  }
+
+  header form input {
+    width: 100%;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  main.container {
+    max-width: 80rem;
+    margin-left: auto;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  aside.container {
+    max-width: 38rem;
+  }
+
+  footer {
+    grid-area: footer;
+    margin-top: 0;
+  }
 }
